@@ -35,12 +35,7 @@ class ViewController: UIViewController {
     // MARK: Life Cycle
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.center = view.center
-        view.addSubview(LoginButton(readPermissions: [ .publicProfile ]))
-
+        configureAuth()
     }
     
     override func didReceiveMemoryWarning() {
