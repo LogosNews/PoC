@@ -8,8 +8,11 @@ target 'PoC' do
 	pod 'FacebookLogin'
 	pod 'FacebookShare'
     
-    pod 'GoogleSignIn'
-    pod 'Google/SignIn'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/RemoteConfig'
+    pod 'FirebaseUI'
   # Pods for PoC
 
 end
