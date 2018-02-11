@@ -5,17 +5,35 @@
 //  Created by Siddharth Pandiya on 2/10/18.
 //  Copyright © 2018 Siddharth Pandiya. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
+import FacebookLogin
+import GoogleSignIn
+
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
 
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Initialize sign-in
+        GIDSignIn.sharedInstance().clientID = "YOUR_CLIENT_ID"
+        GIDSignIn.sharedInstance().delegate = self
+
         return true
     }
 
